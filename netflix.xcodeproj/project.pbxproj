@@ -17,6 +17,7 @@
 		C69A30A4296AC0700027887B /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C69A30A3296AC0700027887B /* SDWebImageMapKit */; };
 		C69A30A6296C72240027887B /* TitleTableviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69A30A5296C72240027887B /* TitleTableviewCell.swift */; };
 		C69A30A8296C75360027887B /* TitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69A30A7296C75360027887B /* TitleViewModel.swift */; };
+		C69A30AC296D89000027887B /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69A30AB296D89000027887B /* SearchResultsViewController.swift */; };
 		C6F52C10295CF389005F2BCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F52C0F295CF389005F2BCE /* AppDelegate.swift */; };
 		C6F52C12295CF389005F2BCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F52C11295CF389005F2BCE /* SceneDelegate.swift */; };
 		C6F52C14295CF389005F2BCE /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F52C13295CF389005F2BCE /* MainTabBarViewController.swift */; };
@@ -37,6 +38,7 @@
 		C69A309E296ABCC10027887B /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		C69A30A5296C72240027887B /* TitleTableviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableviewCell.swift; sourceTree = "<group>"; };
 		C69A30A7296C75360027887B /* TitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewModel.swift; sourceTree = "<group>"; };
+		C69A30AB296D89000027887B /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		C6F52C0C295CF389005F2BCE /* netflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = netflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F52C0F295CF389005F2BCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6F52C11295CF389005F2BCE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,25 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		C69A30AD296D89270027887B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C6F52C24295E3554005F2BCE /* HomeViewController.swift */,
+				C6F52C26295E3589005F2BCE /* UpcomingViewController.swift */,
+				C6F52C28295E35A3005F2BCE /* SearchViewController.swift */,
+				C6F52C2A295E35C2005F2BCE /* DownloadsViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C69A30AE296D89590027887B /* General */ = {
+			isa = PBXGroup;
+			children = (
+				C69A30AB296D89000027887B /* SearchResultsViewController.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
 		C6F52C03295CF389005F2BCE = {
 			isa = PBXGroup;
 			children = (
@@ -144,10 +165,8 @@
 		C6F52C23295E352D005F2BCE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C6F52C24295E3554005F2BCE /* HomeViewController.swift */,
-				C6F52C26295E3589005F2BCE /* UpcomingViewController.swift */,
-				C6F52C28295E35A3005F2BCE /* SearchViewController.swift */,
-				C6F52C2A295E35C2005F2BCE /* DownloadsViewController.swift */,
+				C69A30AE296D89590027887B /* General */,
+				C69A30AD296D89270027887B /* Core */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -238,6 +257,7 @@
 				C647E2D6296420F500994D94 /* HeroHeaderUIView.swift in Sources */,
 				C6F52C2B295E35C2005F2BCE /* DownloadsViewController.swift in Sources */,
 				C6F52C10295CF389005F2BCE /* AppDelegate.swift in Sources */,
+				C69A30AC296D89000027887B /* SearchResultsViewController.swift in Sources */,
 				C60CB36C2965D24D00090D71 /* Extensions.swift in Sources */,
 				C6F52C12295CF389005F2BCE /* SceneDelegate.swift in Sources */,
 				C6F52C27295E3589005F2BCE /* UpcomingViewController.swift in Sources */,
