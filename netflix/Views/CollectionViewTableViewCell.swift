@@ -7,7 +7,11 @@
 
 import UIKit
 
+
+
+
 class CollectionViewTableViewCell: UITableViewCell {
+  
   
 //  MARK: ARRAY TITLES
   
