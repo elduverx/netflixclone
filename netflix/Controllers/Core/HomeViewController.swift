@@ -24,6 +24,7 @@ class HomeViewController: UIViewController {
   let sectionTitles:[String] = ["Trending Movies", "Trending Tv ","Popular","Upcoming Movies","Top Rated"]
   
   
+  
   private var homeFeedTable: UITableView = {
     let table = UITableView(frame: .zero, style: .grouped)
     table.register(CollectionViewTableViewCell.self, forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
@@ -48,7 +49,6 @@ class HomeViewController: UIViewController {
       homeFeedTable.tableHeaderView = headerView
       
    
-      navigationController?.pushViewController(TitlePreviewViewController(), animated: true)
       
     }
   
@@ -88,10 +88,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
 //   MARK: celda
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//    MARK: Idenfifier
+    
+    //    MARK: Idenfifier
     guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.identifier, for: indexPath) as? CollectionViewTableViewCell else{
       return UITableViewCell()
     }
+    
+    cell.delegate = self
     
     switch indexPath.section{
     case Sections.TrendingMovies.rawValue:
@@ -177,4 +180,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     
   }
   
+}
+
+extension HomeViewController: CollectionViewTableViewCellDelegate {
+  func CollectionViewTableViewCellDidTapCell(_ cell: CollectionViewTableViewCell, viewModel: TitlePreviewViewModel) {
+    DispatchQueue.main.async { [weak self] in
+      let vc = TitlePreviewViewController()
+      vc.configure(with: viewModel)
+      self?.navigationController?.pushViewController(vc, animated: true)
+    }
+  }
 }
